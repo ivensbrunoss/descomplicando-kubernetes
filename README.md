@@ -6,8 +6,8 @@ Este repositório contém os arquivos YAML criados durante o curso "Descomplican
 
 Este repositório está organizado da seguinte forma:
 
-* **`Day-01`**: Contém os arquivos YAML relacionados ao módulo [Nome do Módulo 1] do curso.
-* **`Day-02`**: Contém os arquivos YAML relacionados ao módulo [Nome do Módulo 2] do curso.
+* **`Day-01`**: Contém os arquivos YAML relacionados ao módulo Entendendo o que são Containers e o Kubernetes do curso.
+* **`Day-02`**: Contém os arquivos YAML relacionados ao módulo Descomplicando os Pods e Limites de Recursos do curso.
 * **`utils`**: Comandos `kubectl` utilizados frequentemente e arquivos de configuração adicionais.
 
 **Observação:** A estrutura de diretórios pode evoluir conforme o avanço do curso e a necessidade de organização.

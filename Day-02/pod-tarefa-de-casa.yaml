@@ -1,0 +1,39 @@
+﻿apiVersion: v1
+kind: Pod
+metadata:
+  name: tarefa-de-casa
+  labels:
+    role: tarefa-de-casa
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+      protocol: TCP
+    resources:
+      limits:
+        cpu: "0.5"
+        memory: "128Mi"
+      requests:
+        cpu: "0.3"
+        memory: "64Mi"
+    volumeMounts:
+      - name: volume-nginx
+        mountPath: /nginx
+  - name: ubuntu
+    image: ubuntu
+    args:
+    - "sleep"
+    - "infinity"
+    volumeMounts:
+    - mountPath: /cache
+      name: volume-ubuntu
+  volumes:
+    - name: volume-ubuntu
+      emptyDir:
+        sizeLimit: 256Mi
+    - name: volume-nginx
+      emptyDir:
+        sizeLimit: 256Mi
+  restartPolicy: Always
